@@ -7,6 +7,7 @@ import Like from "./common/like"
 class Movies extends React.Component {
     state = {
         movies: getMovies(),
+        currentPage: 1,
         pageSize: 4
     };
 
@@ -27,7 +28,7 @@ class Movies extends React.Component {
 
 
     handlePageChange = page => {
-        console.log('pge change funcio')
+        this.setState({ currentPage: page })
     }
 
     render() {
@@ -67,7 +68,10 @@ class Movies extends React.Component {
                     </tbody>
 
                 </table>
-                <Pagination itemsCount={count} pageSize={this.state.pageSize} onPageChange={this.handlePageChange} />
+                <Pagination itemsCount={count}
+                    pageSize={this.state.pageSize}
+                    currentPage={this.state.currentPage}
+                    onPageChange={this.handlePageChange} />
             </React.Fragment>
 
         )
