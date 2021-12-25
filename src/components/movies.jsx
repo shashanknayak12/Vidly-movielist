@@ -18,7 +18,8 @@ class Movies extends React.Component {
 
 
     componentDidMount() {
-        this.setState({ movies: getMovies(), genres: getGenres() })
+        const genres = [{ name: 'AllGenre' }, ...getGenres()]
+        this.setState({ movies: getMovies(), genres })
     }
 
 
@@ -42,7 +43,7 @@ class Movies extends React.Component {
     }
 
     handleGenreSelect = genre => {
-        this.setState({ selectedGenre: genre })
+        this.setState({ selectedGenre: genre, currentPage: 1 })
     }
 
     render() {
@@ -50,7 +51,8 @@ class Movies extends React.Component {
         const { length: count } = this.state.movies
         const { pageSize, currentPage, selectedGenre, movies: allMovies } = this.state
 
-        const filtered = selectedGenre ? allMovies.filter(m => m.genre._id === selectedGenre._id) : allMovies
+        const filtered = selectedGenre && selectedGenre._id ?
+            allMovies.filter(m => m.genre._id === selectedGenre._id) : allMovies
 
         if (count === 0)
             return <p>There is no movies in database</p>
