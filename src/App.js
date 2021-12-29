@@ -6,6 +6,9 @@ import Customer from './components/customer';
 import Rental from './components/rental'
 import Navbar from './components/navbar';
 import MoiveForm from './components/movieForm';
+import LoginForm from './components/loginform';
+import RegisterForm from './components/registerform'
+import MovieForm from './components/movieForm';
 import './App.css';
 
 
@@ -17,6 +20,9 @@ class App extends React.Component {
         <Navbar />
         <main className='container'>
           <Switch>
+            <Route path='/newmovieform' component={MovieForm} />
+            <Route path='/register' component={RegisterForm} />
+            <Route path='/login' component={LoginForm} />
             <Route path='/movies/:id' component={MoiveForm} />
             <Route path='/movies' component={Movies} />
             <Route path='/customer' component={Customer} />
@@ -26,6 +32,8 @@ class App extends React.Component {
             <Redirect to='/not-found' />
           </Switch>
         </main>
+
+
       </React.Fragment>
 
 
