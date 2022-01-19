@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 const ListGroup = ({ items, textProperty, valueProperty, selectedItem, onItemSelect }) => {
 
     return (

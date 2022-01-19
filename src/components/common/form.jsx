@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Joi, { options } from 'joi-browser'
+import React from 'react';
+import Joi from 'joi-browser'
 import Input from './input';
 import Select from './select';
 

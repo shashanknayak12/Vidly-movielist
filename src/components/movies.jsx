@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { getMovies } from "../services/fakeMovieService"
 import Pagination from './common/pagination'
 import { paginate } from "../utils/paginate"
@@ -76,7 +76,7 @@ class Movies extends React.Component {
         let filtered = allMovies
         if (searchQuery)
             filtered = allMovies.filter(m =>
-                m.title.toLowerCase().startWith(searchQuery.toLowerCase())
+                m.title.toLowerCase().startsWith(searchQuery.toLowerCase())
             )
         else if (selectedGenre && selectedGenre._id)
             filtered = allMovies.filter(m => m.genre._id === selectedGenre._id)

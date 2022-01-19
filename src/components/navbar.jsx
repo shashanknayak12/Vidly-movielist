@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import LoginForm from './loginform';
+
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,7 +28,7 @@ const Navbar = () => {
                                 Movies
                             </NavLink>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <NavLink
                                 className="nav-link"
                                 to="/customer">
@@ -55,7 +55,7 @@ const Navbar = () => {
                                 to="/register">
                                 Register
                             </NavLink>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>
