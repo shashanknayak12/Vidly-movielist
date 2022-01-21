@@ -6,7 +6,7 @@ const Table = ({ data, onsort, sortColumn, columns }) => {
 
 
     return (
-        <table className='table'>
+        <table className='table respo'>
             <TableHeader
                 columns={columns}
                 sortColumn={sortColumn}

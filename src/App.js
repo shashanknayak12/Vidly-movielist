@@ -18,14 +18,14 @@ class App extends React.Component {
         <Navbar />
         <main className='container'>
           <Switch>
-            <Route path='/newmovieform' component={MovieForm} />
+            <Route path='/Vidly-movielist/newmovieform' component={MovieForm} />
 
-            <Route path='/movies/:id' component={MoiveForm} />
-            <Route path='/movies' component={Movies} />
+            <Route path='/Vidly-movielist/movies/:id' component={MoiveForm} />
+            <Route path='/Vidly-movielist/movies' component={Movies} />
 
-            <Route path='/not-found' component={NotFound} />
-            <Route exact path='/' component={Movies} />
-            <Redirect to='/not-found' />
+            <Route path='/Vidly-movielist/not-found' component={NotFound} />
+            <Route exact path='/Vidly-movielist/' component={Movies} />
+            <Redirect to='/Vidly-movielist/not-found' />
           </Switch>
         </main>
 

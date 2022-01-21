@@ -113,7 +113,7 @@ class Movies extends React.Component {
                 <div className='col'>
 
                     <Link
-                        to='/movies/new'
+                        to='/Vidly-movielist/movies/new'
                         className='btn btn-primary m-2'
                     >
                         New Movie
